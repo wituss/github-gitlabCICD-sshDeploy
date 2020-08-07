@@ -1,4 +1,4 @@
-image: 14-jdk-oracle
+image: openjdk:11-alpine
 
 stages:
   - build
