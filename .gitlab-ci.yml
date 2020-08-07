@@ -1,4 +1,4 @@
-image: openjdk:11-alpine
+image: openjdk
 
 stages:
   - build
