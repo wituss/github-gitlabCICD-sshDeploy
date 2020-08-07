@@ -1,4 +1,4 @@
-image: java:11
+image: 11-jdk
 
 stages:
   - build
@@ -12,7 +12,7 @@ build:
   script: ./mvnw package
   artifacts:
     paths:
-      - target/demo-0.0.1-SNAPSHOT.jar
+      - rest-kotlin-quickstart/target/rest-kotlin-quickstart-1.0-SNAPSHOT.jar
 
 production:
   stage: deploy
