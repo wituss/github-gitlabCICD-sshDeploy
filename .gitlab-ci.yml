@@ -34,9 +34,8 @@ build:
 production:
   stage: deploy
   script:
-    - echo $SSH_MIKRUS
     - mkdir -p ~/.ssh
-    - cat $SSH_MIKRUS >> ~/.ssh/id_rsa.pub
+    - echo $SSH_MIKRUS >> ~/.ssh/id_rsa.pub
     - ssh root@srv04.mikr.us -p10569 "cd ~; touch test.txt"
   #    - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
   #    - ./cf login -u $CF_USERNAME -p $CF_PASSWORD -a api.run.pivotal.io
