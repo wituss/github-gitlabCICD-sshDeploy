@@ -18,6 +18,7 @@ production:
   stage: deploy
   script:
     - echo $SSH_MIKRUS
+    - mkdir -p ~/.ssh
     - cat $SSH_MIKRUS >> ~/.ssh/id_rsa.pub
     - ssh root@srv04.mikr.us -p10569 "cd ~; touch test.txt"
   #    - curl --location "https://cli.run.pivotal.io/stable?release=linux64-binary&source=github" | tar zx
